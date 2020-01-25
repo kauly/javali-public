@@ -30,7 +30,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "prod": "next build && next export"
   },
   "devDependencies": {
     "@types/brainhubeu__react-carousel": "^1.10.1",
