@@ -18,6 +18,7 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
             rel="stylesheet"
           ></link>
+          <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
         </Head>
         <body>
           <Main />
