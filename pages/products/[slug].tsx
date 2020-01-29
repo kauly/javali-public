@@ -12,12 +12,12 @@ const Carousel = dynamic(() => import("../../components/Carousell"), {
 });
 
 const Detail = props => {
-  const { title, description, thumbnail, price } = props;
+  const { title, description, imgs, price } = props;
   return (
     <Layout>
       <Flex flexWrap="wrap" padding="20px" height="100%">
         <Box width={[1 / 1, 1 / 2, 1 / 3]} my={[20, 0, 0]}>
-          <Carousel imgs={[thumbnail]} />
+          <Carousel imgs={imgs} />
         </Box>
         <Box width={[1 / 1, 1 / 2, 1 / 3]} my={[20, 0, 0]}>
           <ProductDesc product={{ title, description, price }} />

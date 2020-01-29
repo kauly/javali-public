@@ -12,7 +12,7 @@ const CartItem = (props: ICartItem) => {
     <Flex width="100%" justifyContent="space-around">
       <Box width={1 / 3}>
         <Flex>
-          <Image src={props.item.img} />
+          <Image src={props.item.thumbnail} />
           <Text>{props.item.title}</Text>
         </Flex>
       </Box>
