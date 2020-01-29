@@ -1,8 +1,7 @@
 import * as React from "react";
 import { Flex, Box } from "rebass";
 import { Select, Input } from "@rebass/forms";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import SearchIcon from "@material-ui/icons/Search";
 
 const SearchBar = props => {
   return (
@@ -60,7 +59,7 @@ const SearchBar = props => {
               }
             }}
           >
-            <FontAwesomeIcon icon={faSearch} />
+            <SearchIcon />
           </Flex>
         </Flex>
       </Box>

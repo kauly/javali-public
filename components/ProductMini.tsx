@@ -23,7 +23,7 @@ const ProductMini = (props: IProductMini) => {
         textTransform: "capitalize"
       }}
     >
-      <Image src="/farol.webp" />
+      <Image src={props.product.thumbnail.replace("/public/imgs", "")} />
       <Heading my="10px">{props.product.title}</Heading>
       <Flex flexDirection="column">
         <Button
@@ -33,7 +33,7 @@ const ProductMini = (props: IProductMini) => {
         >
           Carrinho
         </Button>
-        <Button variant="outline" href={`products/${props.product.id}`}>
+        <Button variant="outline" href={`products/farol-product-farol`}>
           Comprar
         </Button>
       </Flex>
