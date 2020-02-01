@@ -1,6 +1,8 @@
 import * as React from "react";
 import { Flex, Image } from "rebass";
 import Carousel, { Dots } from "@brainhubeu/react-carousel";
+import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
+import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 
 const CarouselContainer = props => {
   const [value, setValue] = React.useState(0);
@@ -37,8 +39,8 @@ const CarouselContainer = props => {
         slides={imgsArr.slides}
         value={value}
         onChange={setValue}
-        /*         arrowLeft={<FontAwesomeIcon icon={faArrowLeft} />}
-        arrowRight={<FontAwesomeIcon icon={faArrowRight} />} */
+        arrowLeft={<ArrowBackIosIcon />}
+        arrowRight={<ArrowForwardIosIcon />}
         infinite
         keepDirectionWhenDragging
         addArrowClickHandler
