@@ -4,10 +4,10 @@ export interface IProduct {
   id?: string;
   title?: string;
   price?: number;
-  imgs?: arrOrStr;
+  imgs?: string;
   description?: string;
-  thumbnail?: string;
 }
+
 type arrOrStr = string | Array<string>;
 export interface IProductArr extends Array<IProduct> {
   [index: number]: IProduct;

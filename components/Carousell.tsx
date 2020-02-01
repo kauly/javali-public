@@ -8,18 +8,10 @@ const CarouselContainer = props => {
   const [value, setValue] = React.useState(0);
   const imgsArr = {
     slides: props.imgs.map((img, i) => (
-      <Image
-        key={`slide_${i}`}
-        src={`http://localhost:1337/${img.replace("/public/imgs", "")}`}
-        width="90%"
-      />
+      <Image key={`slide_${i}`} src={img.replace("/public", "")} width="90%" />
     )),
     thumbnails: props.imgs.map((img, i) => (
-      <Image
-        key={`thumb_${i}`}
-        src={`http://localhost:1337/${img.replace("/public/imgs", "")}`}
-        width="80px"
-      />
+      <Image key={`thumb_${i}`} src={img.replace("/public", "")} width="80px" />
     ))
   };
 
