@@ -1,7 +1,6 @@
 backend:
   name: git-gateway
 media_folder: public/img
-public_folder: img
 collections:
   - name: "products" # Used in routes, e.g., /admin/collections/blog
     label: "Produtos" # Used in the UI
