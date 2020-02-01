@@ -33,7 +33,11 @@ const ProductMini = (props: IProductMini) => {
         >
           Carrinho
         </Button>
-        <Button variant="outline" href={`products/${props.product.title}`}>
+        <Button
+          variant="outline"
+          href={`products/[title]`}
+          las={`products/${props.product.title}`}
+        >
           Comprar
         </Button>
       </Flex>
