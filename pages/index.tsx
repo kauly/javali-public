@@ -1,11 +1,9 @@
 import { Flex, Box, Heading } from "rebass";
-import { getProducts } from "../layers/api";
 import { IProductArr } from "../layers/ProductsContext";
 import Layout from "../components/Layout";
 import SearchBar from "../components/SearchBar";
 import ProductMini from "../components/ProductMini";
 import Location from "../components/Location";
-import matter from "gray-matter";
 import { useEffect } from "react";
 
 interface IIndex {
