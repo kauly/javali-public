@@ -21,7 +21,7 @@ const Detail = props => {
           <ProductDesc product={{ title, description, price }} />
         </Box>
         <Box width={[1 / 1, 1 / 2, 1 / 3]} my={[20, 0, 0]}>
-          <ProductPrice price={price} />
+          <ProductPrice product={props} />
         </Box>
       </Flex>
     </Layout>

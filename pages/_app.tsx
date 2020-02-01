@@ -16,8 +16,11 @@ export default class MyApp extends App {
   _handleQutd = () => this.setState({ qutd: this.state.qutd + 1 });
 
   _handleProducts = product => {
-    this.setState({ products: [...this.state.products, product] });
-    this._handleQutd();
+    const same = this.state.products.find(p => p.title === product.title);
+    if (!same) {
+      this.setState({ products: [...this.state.products, product] });
+      this._handleQutd();
+    }
   };
 
   render() {

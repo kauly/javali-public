@@ -4,16 +4,12 @@ import Layout from "../components/Layout";
 import SearchBar from "../components/SearchBar";
 import ProductMini from "../components/ProductMini";
 import Location from "../components/Location";
-import { useEffect } from "react";
 
 interface IIndex {
   products: IProductArr;
 }
 
 const Index = (props: IIndex) => {
-  useEffect(() => {
-    console.log(props);
-  });
   return (
     <Layout>
       <Flex width="100%" alignItems="flex-start" flexWrap="wrap">

@@ -16,7 +16,9 @@ const Cart = props => {
         <Box width={1 / 1}>
           <Flex my="20px" flexDirection="column" alignItems="center">
             {products &&
-              products.map((p: IProduct) => <CartItem item={p} key={p.id} />)}
+              products.map((p: IProduct) => (
+                <CartItem item={p} key={p.title} />
+              ))}
           </Flex>
         </Box>
       </Flex>

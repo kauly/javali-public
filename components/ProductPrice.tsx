@@ -1,7 +1,24 @@
 import { Flex, Heading } from "rebass";
-import Button from "../components/Button";
+import { useRouter } from "next/router";
+import { useContext, MouseEvent } from "react";
 
-const ProductPrice = props => {
+import Button from "../components/Button";
+import Context, { IProduct } from "../layers/ProductsContext";
+
+interface IProductPrice {
+  product: IProduct;
+}
+
+const ProductPrice = (props: IProductPrice) => {
+  const { handleProducts } = useContext(Context);
+  const router = useRouter();
+
+  const _handleClick = (e: MouseEvent) => {
+    e.preventDefault();
+    handleProducts(props.product);
+    router.push(`/cart`);
+  };
+
   return (
     <Flex
       sx={{
@@ -24,7 +41,7 @@ const ProductPrice = props => {
           width: "100%"
         }}
       >
-        <Heading variant="headers">{`R$ ${props.price}`}</Heading>
+        <Heading variant="headers">{`R$ ${props.product.price}`}</Heading>
       </Flex>
       <Flex
         sx={{
@@ -37,7 +54,7 @@ const ProductPrice = props => {
       >
         <Button
           variant="primary"
-          href="/detail"
+          onClick={_handleClick}
           sx={{
             width: "80%",
             height: 60
@@ -47,7 +64,7 @@ const ProductPrice = props => {
         </Button>
         <Button
           variant="outline"
-          href="/detail"
+          onClick={_handleClick}
           sx={{
             width: "80%",
             height: 60
