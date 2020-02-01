@@ -35,7 +35,7 @@ const ProductMini = (props: IProductMini) => {
         </Button>
         <Button
           variant="outline"
-          href={`products/[title]`}
+          href={`products/[slug]`}
           las={`products/${props.product.title}`}
         >
           Comprar
