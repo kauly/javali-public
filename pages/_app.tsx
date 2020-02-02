@@ -23,6 +23,11 @@ export default class MyApp extends App {
     }
   };
 
+  _removeProduct = (title: string) => {
+    const elems = this.state.products.filter(p => p.title !== title);
+    this.setState({ products: elems, qutd: this.state.qutd - 1 });
+  };
+
   render() {
     const { Component, pageProps } = this.props;
     return (
@@ -32,7 +37,8 @@ export default class MyApp extends App {
             qutd: this.state.qutd,
             products: this.state.products,
             handleQutd: this._handleQutd,
-            handleProducts: this._handleProducts
+            handleProducts: this._handleProducts,
+            removeProduct: this._removeProduct
           }}
         >
           <Component {...pageProps} />

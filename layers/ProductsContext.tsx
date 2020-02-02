@@ -18,6 +18,7 @@ interface IProductsContext {
   products?: Array<IProduct>;
   handleQutd?: () => void;
   handleProducts?: (arr: IProduct) => void;
+  removeProduct?: (title: string) => void;
 }
 
 const ProductsContext: Context<IProductsContext> = createContext({});
