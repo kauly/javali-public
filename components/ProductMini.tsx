@@ -9,7 +9,7 @@ interface IProductMini {
 }
 
 const ProductMini = (props: IProductMini) => {
-  const { handleQutd, handleProducts } = useContext(Context);
+  const { handleProducts } = useContext(Context);
 
   return (
     <Card
@@ -23,7 +23,7 @@ const ProductMini = (props: IProductMini) => {
         textTransform: "capitalize"
       }}
     >
-      <Image src={props.product.imgs.replace("/public", "")} size="250px" />
+      <Image src={props.product.imgs[0].replace("/public", "")} size="250px" />
       <Heading my="10px">{props.product.title}</Heading>
       <Flex flexDirection="column">
         <Button

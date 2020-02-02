@@ -15,7 +15,7 @@ const Detail = props => {
     <Layout>
       <Flex flexWrap="wrap" padding="20px" height="100%">
         <Box width={[1 / 1, 1 / 2, 1 / 3]} my={[20, 0, 0]}>
-          <Carousel imgs={[imgs]} />
+          <Carousel imgs={imgs} />
         </Box>
         <Box width={[1 / 1, 1 / 2, 1 / 3]} my={[20, 0, 0]}>
           <ProductDesc product={{ title, description, price }} />
