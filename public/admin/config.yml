@@ -2,12 +2,12 @@ backend:
   name: git-gateway
 media_folder: public/img
 collections:
-  - name: "products" # Used in routes, e.g., /admin/collections/blog
-    label: "Produtos" # Used in the UI
-    folder: "_products" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{title}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
+  - name: "products"
+    label: "Produtos"
+    folder: "_products"
+    create: true
+    slug: "{{title}}"
+    fields:
       - { label: "Titulo", name: "title", widget: "string" }
       - { label: "Data", name: "date", widget: "datetime" }
       - {
@@ -26,7 +26,7 @@ collections:
     files:
       - label: "Localização e Contato"
         name: "location"
-        file: "_pages/location.yml"
+        file: "location.yml"
         fields:
           - { label: "Endereço", name: "address", widget: "markdown" }
           - {

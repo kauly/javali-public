@@ -12,7 +12,7 @@ module.exports = {
       loader: "frontmatter-markdown-loader"
     });
     config.module.rules.push({
-      test: /\.yaml$/,
+      test: /\.yml$/,
       loader: "js-yaml-loader"
     });
     return config;

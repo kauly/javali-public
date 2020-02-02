@@ -46,7 +46,8 @@ Index.getInitialProps = async () => {
     return values.map(({ attributes }) => ({ ...attributes }));
     //@ts-ignore
   })(require.context("../_products", true, /\.md$/));
-
+  const location = await require("../_pages/location.yml");
+  console.log("TCL: Index.getInitialProps -> location", location);
   return {
     products
   };
