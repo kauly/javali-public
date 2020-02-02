@@ -10,7 +10,12 @@ collections:
     fields: # The fields for each document, usually in front matter
       - { label: "Titulo", name: "title", widget: "string" }
       - { label: "Data", name: "date", widget: "datetime" }
-      - { label: "Imagens", name: "imgs", widget: "image" }
+      - {
+          label: "Imagens",
+          name: "imgs",
+          widget: "list",
+          field: { label: Image, name: image, widget: image },
+        }
       - { label: "Descricao", name: "description", widget: "markdown" }
       - { label: "Quantidade", name: "qutd", widget: "number" }
       - { label: "Preco", name: "price", widget: "string" }
