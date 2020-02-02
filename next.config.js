@@ -11,6 +11,10 @@ module.exports = {
       test: /\.md$/,
       loader: "frontmatter-markdown-loader"
     });
+    config.module.rules.push({
+      test: /\.yaml$/,
+      loader: "js-yaml-loader"
+    });
     return config;
   }
 };

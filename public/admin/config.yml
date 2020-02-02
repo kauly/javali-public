@@ -26,7 +26,7 @@ collections:
     files:
       - label: "Localização e Contato"
         name: "location"
-        file: "/_pages/location.yml"
+        file: "_pages/location.yml"
         fields:
           - { label: "Endereço", name: "address", widget: "markdown" }
           - {
