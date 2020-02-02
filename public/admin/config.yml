@@ -20,16 +20,18 @@ collections:
       - { label: "Quantidade", name: "qutd", widget: "number" }
       - { label: "Preco", name: "price", widget: "string" }
       - { label: "Categoria", name: "category", widget: "string" }
-  - name: "location"
-    label: "Localização"
-    folder: "_location"
-    create: false
-    slug: "location"
-    fields:
-      - { label: "Endereço", name: "address", widget: "markdown" }
-      - {
-          label: "Contatos",
-          name: "contacts",
-          widget: "list",
-          field: { label: "Contato", name: "contact", widget: "string" },
-        }
+  - name: "pages"
+    label: "Páginas"
+    folder: "_pages"
+    files:
+      - label: "Localização e Contato"
+        name: "location"
+        file: "/_pages/location.yml"
+        fields:
+          - { label: "Endereço", name: "address", widget: "markdown" }
+          - {
+              label: "Contatos",
+              name: "contacts",
+              widget: "list",
+              field: { label: "Contato", name: "contact", widget: "string" },
+            }
