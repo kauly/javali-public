@@ -25,7 +25,7 @@ const CartItem = (props: ICartItem) => {
         position: "relative"
       }}
     >
-      <Image src={props.item.imgs.replace("/public", "")} size="120px" />
+      <Image src={props.item.imgs[0].replace("/public", "")} size="120px" />
       <Text ml="2" variant="normal">
         {props.item.title}
       </Text>
