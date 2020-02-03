@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Flex, Box, Image } from "rebass";
 import Link from "next/link";
+import IconButton from "@material-ui/core/IconButton";
+import WhatsIcon from "@material-ui/icons/WhatsApp";
 
 import CartIcon from "./CartIcon";
 import NavLink from "./NavLink";
@@ -40,7 +42,10 @@ const Navbar = props => {
           </Flex>
         </Box>
         <Box width={[1 / 3, 1 / 5, 1 / 5]}>
-          <Flex justifyContent="center">
+          <Flex justifyContent="space-around">
+            <IconButton>
+              <WhatsIcon fontSize="large" />
+            </IconButton>
             <CartIcon />
           </Flex>
         </Box>

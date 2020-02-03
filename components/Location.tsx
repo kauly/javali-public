@@ -2,7 +2,11 @@ import React, { useState } from "react";
 import ReactMapGL from "react-map-gl";
 import { Flex, Box, Heading, Text } from "rebass";
 
-const Map = () => {
+interface ILocation {
+  data: any;
+}
+
+const Map = (props: ILocation) => {
   const [viewport, setViewport] = useState({
     width: 400,
     height: 400,
@@ -35,9 +39,13 @@ const Map = () => {
             alignItems="center"
           >
             <Heading variant="headers">Endereço</Heading>
-            <Text variant="normal">Rua da Paz, Kobrassol, São José - SC</Text>
+            <Text variant="normal">{props.data.address}</Text>
             <Heading variant="headers">Contato</Heading>
-            <Text variant="normal">(48) 988231211</Text>
+            {props.data.contacts.map(contact => (
+              <Text variant="normal" key={contact}>
+                {contact}
+              </Text>
+            ))}
           </Flex>
         </Box>
       </Flex>

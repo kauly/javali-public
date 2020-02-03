@@ -7,7 +7,7 @@ interface IBurguer {
 
 const Burguer = (props: IBurguer) => {
   return (
-    <IconButton arial-label="menu" onClick={props.handleClick}>
+    <IconButton arial-label="menu" onClick={props.handleClick} size="medium">
       <MenuIcon fontSize="large" />
     </IconButton>
   );

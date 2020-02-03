@@ -1,10 +1,12 @@
 import { Flex, Box } from "rebass";
 import dynamic from "next/dynamic";
+import { NextPageContext } from "next";
 
 import Layout from "../../components/Layout";
 import ProductDesc from "../../components/ProductDesc";
 import ProductPrice from "../../components/ProductPrice";
-import { NextPageContext } from "next";
+import Back from "../../components/BackBar";
+
 const Carousel = dynamic(() => import("../../components/Carousell"), {
   ssr: false
 });
@@ -13,7 +15,8 @@ const Detail = props => {
   const { title, description, imgs, price } = props;
   return (
     <Layout>
-      <Flex flexWrap="wrap" padding="20px" height="100%">
+      <Flex flexWrap="wrap" height="100%">
+        <Back />
         <Box width={[1 / 1, 1 / 2, 1 / 3]} my={[20, 0, 0]}>
           <Carousel imgs={imgs} />
         </Box>

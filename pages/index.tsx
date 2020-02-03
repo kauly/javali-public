@@ -7,6 +7,7 @@ import Location from "../components/Location";
 
 interface IIndex {
   products: IProductArr;
+  location: any;
 }
 
 const Index = (props: IIndex) => {
@@ -32,7 +33,7 @@ const Index = (props: IIndex) => {
           </Flex>
         </Box>
         <Box width={1 / 1}>
-          <Location />
+          <Location data={props.location} />
         </Box>
       </Flex>
     </Layout>
@@ -47,9 +48,9 @@ Index.getInitialProps = async () => {
     //@ts-ignore
   })(require.context("../_products", true, /\.md$/));
   const location = await require("../_pages/location.yml");
-  console.log("TCL: Index.getInitialProps -> location", location);
   return {
-    products
+    products,
+    location
   };
 };
 
