@@ -36,16 +36,17 @@ const Navbar = props => {
           }}
         >
           <Flex justifyContent="space-around" alignItems="center">
-            <NavLink href="#location" text="Acessoria" />
+            <NavLink href="/accessory" text="Acessoria" />
             <NavLink href="#location" text="Como o site funciona?" />
             <NavLink href="#location" text="Localização" />
           </Flex>
         </Box>
         <Box width={[1 / 3, 1 / 5, 1 / 5]}>
-          <Flex justifyContent="space-around">
+          <Flex justifyContent="space-around" alignItems="center">
             <IconButton>
               <WhatsIcon fontSize="large" />
             </IconButton>
+
             <CartIcon />
           </Flex>
         </Box>

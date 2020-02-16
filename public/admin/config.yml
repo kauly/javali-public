@@ -34,3 +34,14 @@ collections:
               widget: "list",
               field: { label: "Contato", name: "contact", widget: "string" },
             }
+      - label: "Acessoria"
+        name: "accessory"
+        file: "_pages/accessory.yml"
+        fields:
+          - { label: "Texto", name: "text", widget: "markdown" }
+          - {
+              label: "Imagens",
+              name: "imgs",
+              widget: "list",
+              field: { label: Image, name: image, widget: image },
+            }
