@@ -18,7 +18,7 @@ const Navbar = props => {
         <Box width={[1 / 3, 1 / 5, 1 / 5]}>
           <Link href="/">
             <Image
-              src="/logo_um.png"
+              src="/img/logo_um.png"
               width="70px"
               height="70px"
               sx={{
@@ -37,8 +37,7 @@ const Navbar = props => {
         >
           <Flex justifyContent="space-around" alignItems="center">
             <NavLink href="/accessory" text="Acessoria" />
-            <NavLink href="#location" text="Como o site funciona?" />
-            <NavLink href="#location" text="Localização" />
+            <NavLink href="/#location" text="Localização" />
           </Flex>
         </Box>
         <Box width={[1 / 3, 1 / 5, 1 / 5]}>

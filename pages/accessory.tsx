@@ -1,9 +1,10 @@
 import { Flex, Box, Heading, Text } from "rebass";
-import { FunctionComponent } from "react";
+import { NextPage } from "next";
 
 import Layout from "../components/Layout";
 import Back from "../components/BackBar";
 import Whats from "../components/Whats";
+import Carousell from "../components/Carousell";
 
 interface IAcessory {
   text?: string;
@@ -14,18 +15,27 @@ const defaultProps: IAcessory = {
   text: ""
 };
 
-const Acessory: FunctionComponent<IAcessory> = props => {
+const Acessory: NextPage<IAcessory> = props => {
   return (
     <Layout>
-      <Flex flexWrap="wrap" width="100%">
+      <Flex flexWrap="wrap">
         <Back />
         <Box width={1 / 1}>
-          <Heading variant="headers" marginTop="1px">
-            acessoria
-          </Heading>
+          <Heading variant="headers">acessoria</Heading>
+        </Box>
+        <Box
+          width={1 / 1}
+          sx={{
+            textAlign: "center",
+            marginBottom: 4
+          }}
+        >
+          <Text variant="normal">{props.text}</Text>
         </Box>
         <Box width={1 / 1}>
-          <Text>{props.text}</Text>
+          <Box>
+            <Carousell imgs={props.imgs} size="600px" />
+          </Box>
         </Box>
         <Box width={1 / 1}>
           <Flex justifyContent="center">
@@ -38,5 +48,9 @@ const Acessory: FunctionComponent<IAcessory> = props => {
 };
 
 Acessory.defaultProps = defaultProps;
+Acessory.getInitialProps = async () => {
+  const { text, imgs } = await require("../_pages/accessory.yml");
+  return { text, imgs };
+};
 
 export default Acessory;

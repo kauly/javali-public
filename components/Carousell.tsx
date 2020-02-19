@@ -4,11 +4,24 @@ import Carousel, { Dots } from "@brainhubeu/react-carousel";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 
-const CarouselContainer = props => {
+interface ICarousel {
+  imgs?: [string];
+  size?: string;
+}
+
+const defaultProps: ICarousel = {
+  size: "90%"
+};
+
+const CarouselContainer = (props: ICarousel) => {
   const [value, setValue] = React.useState(0);
   const imgsArr = {
     slides: props.imgs.map((img, i) => (
-      <Image key={`slide_${i}`} src={img.replace("/public", "")} width="90%" />
+      <Image
+        key={`slide_${i}`}
+        src={img.replace("/public", "")}
+        width={props.size}
+      />
     )),
     thumbnails: props.imgs.map((img, i) => (
       <Image key={`thumb_${i}`} src={img.replace("/public", "")} width="80px" />
@@ -48,5 +61,7 @@ const CarouselContainer = props => {
     </Flex>
   );
 };
+
+CarouselContainer.defaultProps = defaultProps;
 
 export default CarouselContainer;

@@ -64,7 +64,7 @@ export default {
       letterSpacing: "caps",
       fontFamily: "body",
       marginBottom: [3, 6, 6],
-      marginTop: [3, 6, 6],
+
       textAlign: "center"
     },
     normal: {

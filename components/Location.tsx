@@ -19,7 +19,9 @@ const Map = (props: ILocation) => {
     <section id="location">
       <Flex flexWrap="wrap" width="100%">
         <Box width={1 / 1}>
-          <Heading variant="headers">Localização</Heading>
+          <Heading variant="headers" marginTop={[3, 6, 6]}>
+            Localização
+          </Heading>
         </Box>
         <Box width={[3 / 3, 2 / 3, 2 / 3]}>
           <Flex>
@@ -38,9 +40,13 @@ const Map = (props: ILocation) => {
             justifyContent="center"
             alignItems="center"
           >
-            <Heading variant="headers">Endereço</Heading>
+            <Heading variant="headers" marginTop={[3, 6, 6]}>
+              Endereço
+            </Heading>
             <Text variant="normal">{props.data.address}</Text>
-            <Heading variant="headers">Contato</Heading>
+            <Heading variant="headers" marginTop={[3, 6, 6]}>
+              Contato
+            </Heading>
             {props.data.contacts.map(contact => (
               <Text variant="normal" key={contact}>
                 {contact}

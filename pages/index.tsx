@@ -18,7 +18,9 @@ const Index = (props: IIndex) => {
           <SearchBar />
         </Box>
         <Box width={1 / 1}>
-          <Heading variant="headers">produtos</Heading>
+          <Heading variant="headers" marginTop={[3, 6, 6]}>
+            produtos
+          </Heading>
         </Box>
         <Box width={1 / 1}>
           <Flex
