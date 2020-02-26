@@ -8,6 +8,7 @@ import Location from "../components/Location";
 interface IIndex {
   products: IProductArr;
   location: any;
+  categories?: [];
 }
 
 const Index = (props: IIndex) => {
@@ -15,7 +16,7 @@ const Index = (props: IIndex) => {
     <Layout>
       <Flex width="100%" alignItems="flex-start" flexWrap="wrap">
         <Box width={1 / 1}>
-          <SearchBar />
+          <SearchBar items={props.categories} />
         </Box>
         <Box width={1 / 1}>
           <Heading variant="headers" marginTop={[3, 6, 6]}>
@@ -50,9 +51,11 @@ Index.getInitialProps = async () => {
     //@ts-ignore
   })(require.context("../_products", true, /\.md$/));
   const location = await require("../_pages/location.yml");
+  const { categories } = await require("../_pages/categories.yml");
   return {
     products,
-    location
+    location,
+    categories
   };
 };
 

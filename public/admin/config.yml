@@ -45,3 +45,13 @@ collections:
               widget: "list",
               field: { label: Image, name: image, widget: image },
             }
+      - label: "Categorias"
+        name: "categories"
+        file: "_pages/categories.yml"
+        fields:
+          - {
+              label: "Categorias",
+              name: "categoriesList",
+              widget: "list",
+              field: { label: "Categoria", name: "category", widget: "string" },
+            }

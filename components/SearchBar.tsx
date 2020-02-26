@@ -3,7 +3,15 @@ import { Flex, Box } from "rebass";
 import { Select, Input } from "@rebass/forms";
 import SearchIcon from "@material-ui/icons/Search";
 
-const SearchBar = props => {
+interface ISearchBar {
+  items?: [];
+}
+
+const defaultProps: ISearchBar = {
+  items: []
+};
+
+const SearchBar: React.FC<ISearchBar> = props => {
   return (
     <Flex
       bg="searchBg"
@@ -30,9 +38,12 @@ const SearchBar = props => {
           }}
         >
           <option defaultChecked>Categorias</option>
-          <option key={0}>Farol</option>
-          <option key={1}>Guincho</option>
-          <option key={2}>Pneu</option>
+          {props.items.length &&
+            props.items.map((item, i) => (
+              <option key={i} value={0}>
+                {item}
+              </option>
+            ))}
         </Select>
       </Box>
       <Box width={[1 / 2, 1 / 3, 1 / 3]}>
@@ -67,5 +78,7 @@ const SearchBar = props => {
     </Flex>
   );
 };
+
+SearchBar.defaultProps = defaultProps;
 
 export default SearchBar;
