@@ -55,3 +55,4 @@ collections:
               widget: "list",
               field: { label: "Categoria", name: "category", widget: "string" },
             }
+          - { label: "Testando", name: "test", widget: "teste" }
