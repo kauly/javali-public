@@ -1,7 +1,4 @@
 import { Widget as FileRelationWidget } from "@ncwidgets/file-relation";
 
-CMS.registerWidget(
-  FileRelationWidget.name,
-  FileRelationWidget.controlComponent,
-  FileRelationWidget.previewComponent
-);
+CMS.registerWidget(FileRelationWidget);
+CMS.init();
