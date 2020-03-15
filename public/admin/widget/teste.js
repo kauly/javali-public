@@ -8,6 +8,7 @@ const Control = createClass({
   },
   componentDidMount: function() {
     const { loadEntry, field } = this.props;
+    console.log(" this.props", this.props);
 
     const collection = field.get("collection");
     const file = field.get("file");
