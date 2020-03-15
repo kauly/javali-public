@@ -51,11 +51,11 @@ Index.getInitialProps = async () => {
     //@ts-ignore
   })(require.context("../_products", true, /\.md$/));
   const location = await require("../_pages/location.yml");
-  const { categoriesList } = await require("../_pages/categories.yml");
+  const { attributes } = await require("../_pages/categories.md");
   return {
     products,
     location,
-    categoriesList
+    categoriesList: attributes.categoriesList
   };
 };
 
