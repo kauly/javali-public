@@ -24,7 +24,7 @@ collections:
           name: category,
           widget: ncw-file-relation,
           collection: pages,
-          file: _pages/categories.md,
+          file: categories.md,
           target_field: categoriesList,
           id_field: category,
           display_fields: category,
