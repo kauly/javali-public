@@ -16,14 +16,15 @@ const Control = createClass({
     const fieldId = field.get("id_field");
     const fieldDisplay = field.get("display_fields") || fieldId;
 
-    loadEntry(collection, file).then(results => {
-      const data = results.payload.entry.data[fieldName];
-      const options = data.map(option => ({
-        value: option[fieldId],
-        label: option[fieldDisplay]
-      }));
-      this.setState({ options });
-    });
+    const results = loadEntry(collection, file);
+    console.log("results", results);
+
+    const data = results.payload.entry.data[fieldName];
+    const options = data.map(option => ({
+      value: option[fieldId],
+      label: option[fieldDisplay]
+    }));
+    this.setState({ options });
   },
 
   changeHandler: function(event) {
