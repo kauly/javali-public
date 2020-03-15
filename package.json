@@ -9,6 +9,7 @@
     "@material-ui/core": "^4.8.3",
     "@material-ui/icons": "^4.5.1",
     "@mdx-js/react": "^1.5.1",
+    "@ncwidgets/file-relation": "^0.5.0",
     "@rebass/forms": "^4.0.6",
     "@rebass/preset": "^4.0.5",
     "@theme-ui/presets": "^0.2.44",
