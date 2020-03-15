@@ -1,4 +1,6 @@
+---
 categoriesList:
   - pneu
   - farol
   - lanterna
+---
