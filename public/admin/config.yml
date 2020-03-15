@@ -24,7 +24,7 @@ collections:
           name: category,
           widget: ncw-file-relation,
           collection: pages,
-          file: _pages/categories.yml,
+          file: _pages/categories.md,
           target_field: categoriesList,
           id_field: category,
           display_fields: category,
@@ -56,7 +56,7 @@ collections:
             }
       - label: "Categorias"
         name: "categories"
-        file: "_pages/categories.yml"
+        file: "_pages/categories.md"
         fields:
           - {
               label: "Categorias",
