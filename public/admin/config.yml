@@ -19,12 +19,11 @@ collections:
       - { label: "Descricao", name: "description", widget: "markdown" }
       - { label: "Quantidade", name: "qutd", widget: "number" }
       - { label: "Preco", name: "price", widget: "string" }
-      - { label: "Categoria", name: "category", widget: "string" }
       - {
-          label: Categorias,
+          label: Categoria,
           name: category,
           widget: ncw-file-relation,
-          collection: categories,
+          collection: pages,
           file: _pages/categories.yml,
           target_field: categoriesList,
           id_field: category,
