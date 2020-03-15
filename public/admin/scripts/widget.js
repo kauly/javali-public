@@ -1,4 +1,3 @@
-import { Widget as FileRelationWidget } from "@ncwidgets/file-relation";
+import { Control, Preview } from "@ncwidgets/file-relation";
 
-CMS.registerWidget(FileRelationWidget);
-CMS.init();
+CMS.registerWidget("file-relation", Control, Preview);
