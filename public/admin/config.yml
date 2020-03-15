@@ -20,14 +20,14 @@ collections:
       - { label: "Quantidade", name: "qutd", widget: "number" }
       - { label: "Preco", name: "price", widget: "string" }
       - {
-          label: Categoria,
-          name: category,
-          widget: ncw-file-relation,
-          collection: pages,
-          file: categories,
-          target_field: categoriesList,
-          id_field: category,
-          display_fields: category,
+          label: "Categoria",
+          name: "category",
+          widget: "custom-file-relation",
+          collection: "pages",
+          file: "categories",
+          target_field: "categoriesList",
+          id_field: "category",
+          display_fields: "category",
         }
   - name: "pages"
     label: "Páginas"
