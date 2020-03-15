@@ -20,6 +20,16 @@ collections:
       - { label: "Quantidade", name: "qutd", widget: "number" }
       - { label: "Preco", name: "price", widget: "string" }
       - { label: "Categoria", name: "category", widget: "string" }
+      - {
+          label: Categorias,
+          name: category,
+          widget: ncw-file-relation,
+          collection: categories,
+          file: _pages/categories.yml,
+          target_field: categoriesList,
+          id_field: category,
+          display_fields: category,
+        }
   - name: "pages"
     label: "Páginas"
     files:
@@ -55,4 +65,3 @@ collections:
               widget: "list",
               field: { label: "Categoria", name: "category", widget: "string" },
             }
-          - { label: "Testando", name: "test", widget: "teste" }
