@@ -4,6 +4,7 @@ media_folder: public/img
 collections:
   - name: "products"
     label: "Produtos"
+    extensions: "yml"
     folder: "_products"
     create: true
     slug: "{{title}}"
@@ -56,7 +57,7 @@ collections:
             }
       - label: "Categorias"
         name: "categories"
-        file: "_pages/categories.md"
+        file: "_pages/categories.yml"
         fields:
           - {
               label: "Categorias",
