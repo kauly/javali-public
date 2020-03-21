@@ -19,7 +19,7 @@ const Control = createClass({
     const results = await loadEntry(collection, file);
     console.log("results", results);
 
-    const data = results.payload.entry.data[fieldName];
+    const data = results.data[fieldName];
     const options = data.map(option => ({
       value: option[fieldId],
       label: option[fieldDisplay]
