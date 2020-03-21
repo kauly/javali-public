@@ -10,6 +10,7 @@ const Control = createClass({
     const { loadEntry, field } = this.props;
     const collection = field.get("collection");
     const fieldName = field.get("target_field");
+    const file = field.get("file");
     const results = await loadEntry(collection, file);
     const data = results.data[fieldName];
     const options = data.map(option => ({
