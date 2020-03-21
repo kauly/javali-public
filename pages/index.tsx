@@ -46,16 +46,16 @@ const Index = (props: IIndex) => {
 Index.getInitialProps = async () => {
   const products = (context => {
     const keys = context.keys();
-    const values = keys.map(context);
-    return values.map(({ attributes }) => ({ ...attributes }));
+    return keys.map(context);
     //@ts-ignore
-  })(require.context("../_products", true, /\.md$/));
+  })(require.context("../_products", true, /\.yml$/));
+
   const location = await require("../_pages/location.yml");
-  const { attributes } = await require("../_pages/categories.md");
+  const { categoriesList } = await require("../_pages/categories.yml");
   return {
     products,
     location,
-    categoriesList: attributes.categoriesList
+    categoriesList
   };
 };
 

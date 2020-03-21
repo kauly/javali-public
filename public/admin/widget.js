@@ -12,6 +12,7 @@ const Control = createClass({
     const fieldName = field.get("target_field");
     const file = field.get("file");
     const results = await loadEntry(collection, file);
+    console.log("results", results);
     const data = results.data[fieldName];
     const options = data.map(option => ({
       value: option,

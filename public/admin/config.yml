@@ -1,5 +1,5 @@
 backend:
-  name: git-gateway
+  name: test-repo
 media_folder: public/img
 collections:
   - name: "products"
