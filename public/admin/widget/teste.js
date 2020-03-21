@@ -23,8 +23,8 @@ const Control = createClass({
 
     const data = results.data[fieldName];
     const options = data.map(option => ({
-      value: option[fieldId],
-      label: option[fieldDisplay]
+      value: option,
+      label: option
     }));
     console.log("options", options);
     this.setState({ options });
