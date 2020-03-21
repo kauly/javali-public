@@ -22,7 +22,7 @@ collections:
       - {
           label: "Categoria",
           name: "category",
-          widget: "ncw-file-relation",
+          widget: "custom-file-relation",
           collection: "pages",
           file: "categories",
           target_field: "categoriesList",
