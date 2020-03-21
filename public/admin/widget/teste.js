@@ -6,7 +6,7 @@ const Control = createClass({
       options: []
     };
   },
-  componentDidMount: function() {
+  componentDidMount: async function() {
     const { loadEntry, field } = this.props;
     console.log(" this.props", this.props);
 
@@ -16,7 +16,7 @@ const Control = createClass({
     const fieldId = field.get("id_field");
     const fieldDisplay = field.get("display_fields") || fieldId;
 
-    const results = loadEntry(collection, file);
+    const results = await loadEntry(collection, file);
     console.log("results", results);
 
     const data = results.payload.entry.data[fieldName];
