@@ -14,7 +14,9 @@ const Control = createClass({
     const file = field.get("file");
     const fieldName = field.get("target_field");
     const fieldId = field.get("id_field");
+    console.log("fieldId", fieldId);
     const fieldDisplay = field.get("display_fields") || fieldId;
+    console.log("fieldDisplay", fieldDisplay);
 
     const results = await loadEntry(collection, file);
     console.log("results", results);
@@ -24,6 +26,7 @@ const Control = createClass({
       value: option[fieldId],
       label: option[fieldDisplay]
     }));
+    console.log("options", options);
     this.setState({ options });
   },
 
