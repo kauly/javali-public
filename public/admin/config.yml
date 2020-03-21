@@ -9,6 +9,7 @@ collections:
   - name: "products"
     label: "Produtos"
     extensions: "yml"
+    format: "yml"
     folder: "_products"
     create: true
     slug: "{{title}}"
