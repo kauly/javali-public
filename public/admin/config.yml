@@ -1,6 +1,10 @@
 backend:
   name: git-gateway
-media_folder: public/img
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: dqapaie8f
+    api_key: 676736277633762
 collections:
   - name: "products"
     label: "Produtos"

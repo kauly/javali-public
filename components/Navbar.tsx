@@ -18,7 +18,7 @@ const Navbar = props => {
         <Box width={[1 / 3, 1 / 5, 1 / 5]}>
           <Link href="/">
             <Image
-              src="/img/logo_um.png"
+              src="https://res.cloudinary.com/dqapaie8f/image/upload/v1584817181/javali/logos/logo_um.png"
               width="70px"
               height="70px"
               sx={{
