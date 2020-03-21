@@ -8,25 +8,14 @@ const Control = createClass({
   },
   componentDidMount: async function() {
     const { loadEntry, field } = this.props;
-    console.log(" this.props", this.props);
-
     const collection = field.get("collection");
-    const file = field.get("file");
     const fieldName = field.get("target_field");
-    const fieldId = field.get("id_field");
-    console.log("fieldId", fieldId);
-    const fieldDisplay = field.get("display_fields") || fieldId;
-    console.log("fieldDisplay", fieldDisplay);
-
     const results = await loadEntry(collection, file);
-    console.log("results", results);
-
     const data = results.data[fieldName];
     const options = data.map(option => ({
       value: option,
       label: option
     }));
-    console.log("options", options);
     this.setState({ options });
   },
 
