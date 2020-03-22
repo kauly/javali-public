@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { Card, Image, Heading, Flex } from "rebass";
+import slugify from "slugify";
 
 import Button from "./Button";
 import Context, { IProduct } from "../layers/ProductsContext";
@@ -23,7 +24,7 @@ const ProductMini = (props: IProductMini) => {
         textTransform: "capitalize"
       }}
     >
-      <Image src={props.product.imgs[0].replace("/public", "")} size="250px" />
+      <Image src={props.product.imgs[0]} size="250px" />
       <Heading my="10px">{props.product.title}</Heading>
       <Flex flexDirection="column">
         <Button
@@ -36,7 +37,7 @@ const ProductMini = (props: IProductMini) => {
         <Button
           variant="outline"
           href={`products/[slug]`}
-          las={`products/${props.product.title}`}
+          las={`products/${slugify(props.product.title, { lower: true })}`}
         >
           Comprar
         </Button>

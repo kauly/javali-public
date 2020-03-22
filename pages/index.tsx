@@ -1,5 +1,8 @@
+import React, { useEffect, useContext } from "react";
 import { Flex, Box, Heading } from "rebass";
-import { IProductArr } from "../layers/ProductsContext";
+
+import Context, { IProductArr } from "../layers/ProductsContext";
+
 import Layout from "../components/Layout";
 import SearchBar from "../components/SearchBar";
 import ProductMini from "../components/ProductMini";
@@ -12,6 +15,12 @@ interface IIndex {
 }
 
 const Index = (props: IIndex) => {
+  const { setAllProducts, searched } = useContext(Context);
+
+  useEffect(() => {
+    setAllProducts(props.products);
+  }, []);
+
   return (
     <Layout>
       <Flex width="100%" alignItems="flex-start" flexWrap="wrap">
@@ -30,7 +39,7 @@ const Index = (props: IIndex) => {
             flexWrap="wrap"
             justifyContent="center"
           >
-            {props.products.map((product, i) => (
+            {searched.map((product, i) => (
               <ProductMini product={product} key={i} />
             ))}
           </Flex>
@@ -50,10 +59,15 @@ Index.getInitialProps = async () => {
     //@ts-ignore
   })(require.context("../_products", true, /\.yml$/));
 
+  const transformProducts = products.map(p => ({
+    ...p,
+    category: p.category.label
+  }));
+
   const location = await require("../_pages/location.yml");
   const { categoriesList } = await require("../_pages/categories.yml");
   return {
-    products,
+    products: transformProducts,
     location,
     categoriesList
   };

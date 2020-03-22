@@ -1,7 +1,9 @@
-import * as React from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { Flex, Box } from "rebass";
 import { Select, Input } from "@rebass/forms";
 import SearchIcon from "@material-ui/icons/Search";
+
+import Context, { IProductArr } from "../layers/ProductsContext";
 
 interface ISearchBar {
   items?: [];
@@ -12,6 +14,9 @@ const defaultProps: ISearchBar = {
 };
 
 const SearchBar: React.FC<ISearchBar> = props => {
+  const { filterProducts } = useContext(Context);
+
+  const _handleChange = e => filterProducts(e.target.value);
   return (
     <Flex
       bg="searchBg"
@@ -26,6 +31,7 @@ const SearchBar: React.FC<ISearchBar> = props => {
         <Select
           id="categories"
           name="categories"
+          onChange={_handleChange}
           sx={{
             width: [180, 240, 240],
             fontFamily: "body",
@@ -37,10 +43,12 @@ const SearchBar: React.FC<ISearchBar> = props => {
             }
           }}
         >
-          <option defaultChecked>Categorias</option>
+          <option defaultChecked value="all">
+            Todos
+          </option>
           {props.items.length &&
             props.items.map((item, i) => (
-              <option key={i} value={0}>
+              <option key={i} value={item}>
                 {item}
               </option>
             ))}
