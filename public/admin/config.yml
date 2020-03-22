@@ -3,8 +3,8 @@ backend:
 media_library:
   name: cloudinary
   config:
-    cloud_name: dqapaie8f
-    api_key: 676736277633762
+    cloud_name: javalis-store
+    api_key: 771959971237763
 collections:
   - name: "products"
     label: "Produtos"
