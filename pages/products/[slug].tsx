@@ -35,7 +35,6 @@ Detail.getInitialProps = async (props: NextPageContext) => {
   const { slug } = props.query;
   try {
     const product = await import(`../../_products/${slug}.yml`);
-    console.log("Detail.getInitialProps -> product", product);
     return { ...product };
   } catch (err) {
     console.error(err);

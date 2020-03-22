@@ -1,5 +1,5 @@
 import React, { useEffect, useContext } from "react";
-import { Flex, Box, Heading } from "rebass";
+import { Flex, Box, Heading, Text } from "rebass";
 
 import Context, { IProductArr } from "../layers/ProductsContext";
 
@@ -15,11 +15,13 @@ interface IIndex {
 }
 
 const Index = (props: IIndex) => {
-  const { setAllProducts, searched } = useContext(Context);
+  const { setAllProducts, searched, filterProducts } = useContext(Context);
 
   useEffect(() => {
     setAllProducts(props.products);
   }, []);
+
+  const _handleClick = e => filterProducts("all");
 
   return (
     <Layout>
@@ -39,9 +41,24 @@ const Index = (props: IIndex) => {
             flexWrap="wrap"
             justifyContent="center"
           >
-            {searched.map((product, i) => (
-              <ProductMini product={product} key={i} />
-            ))}
+            {searched.length ? (
+              searched.map((product, i) => (
+                <ProductMini product={product} key={i} />
+              ))
+            ) : (
+              <Text variant="normal">
+                Nehum produto encontrado,
+                <Text
+                  fontWeight="bold"
+                  sx={{
+                    ":hover": { cursor: "pointer", textDecoration: "underline" }
+                  }}
+                  onClick={_handleClick}
+                >
+                  visualizar todos.
+                </Text>
+              </Text>
+            )}
           </Flex>
         </Box>
         <Box width={1 / 1}>
