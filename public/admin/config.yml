@@ -1,10 +1,5 @@
 backend:
   name: git-gateway
-media_library:
-  name: cloudinary
-  config:
-    cloud_name: javalis-store
-    api_key: 771959971237763
 collections:
   - name: "products"
     label: "Produtos"

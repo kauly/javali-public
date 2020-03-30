@@ -8,9 +8,5 @@ module.exports = {
       loader: "js-yaml-loader"
     });
     return config;
-  },
-  env: {
-    MapboxAccessToken:
-      "pk.eyJ1Ijoia2F1bHkiLCJhIjoiY2pwYmlwMTF0MHdubzNrcGQyMXVucjlzeCJ9.2vo8QG1szbJ8qh5Ac3fftQ"
   }
 };
