@@ -14,7 +14,7 @@
     "@theme-ui/presets": "^0.2.44",
     "@zeit/next-css": "^1.0.1",
     "gray-matter": "^4.0.2",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "next": "^9.1.1",
     "normalize.css": "^8.0.1",
     "raw-loader": "^4.0.0",
